@@ -1,0 +1,66 @@
+/* common styles */
+*{  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+/* End of Common styles */
+
+/* wrapper class for all the link elements */
+.slideshow{
+    width: 100%;
+    height: 100vh;
+    /* graddient from center */
+    background: radial-gradient(rgba(78, 78, 78, 0.5), rgba(0, 0, 0, 0.4)), 
+    url(CodingPlatformIcons/Coding-BG.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/* let set width of each link item is  */
+
+.slideshow-link{
+    /* width of .slideshow = 1479.200px */
+    /* .slideshow-link = 100% /6 of 1479.200px */
+    /* (1479.200 * 16.666) / 100 = 246.525px */
+    width: calc(100% / 6);
+    filter:brightness(0.1);
+    /* This means the brightness will be only 10% of its default brightness. */
+}
+
+/* we have to use transition for the first element for smooth effect */
+.slideshow-link:nth-child(1),
+.slideshow-link:nth-child(6){
+    transition: width 0.5s, opacity 0.5s;
+}
+
+.slideshow-link:nth-child(3){
+    transition: filter 0.5s;
+}
+
+/* now in this case image will take up the 100%sizenof parent element */
+.slideshow-link img{
+    width : 95%;
+}
+
+.faded-out{
+    /* In order to fade the element out we need to set the opacity and width 0, and
+    besides that we have to use the transition for the first icon ,in order to select 
+    that we need to use nth-of-type(1) */
+    opacity: 0;
+    width: 0;
+}
+
+.light{
+    filter: brightness(1.3);
+    transition: filter 1.5s;
+}
