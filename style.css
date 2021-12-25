@@ -17,8 +17,7 @@ html{
     width: 100%;
     height: 100vh;
     /* graddient from center */
-    background: radial-gradient(rgba(78, 78, 78, 0.5), rgba(0, 0, 0, 0.4)), 
-    url(CodingPlatformIcons/Coding-BG.jpg) center no-repeat;
+    background: url(CodingPlatformIcons/Coding-BG.jpg) center no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: row;
